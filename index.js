@@ -1,6 +1,9 @@
 const express = require('express');
 const { generateSlug } = require('random-word-slugs');
 const { ECSClient, RunTaskCommand } = require('@aws-sdk/client-ecs');
+const { config } = require('dotenv');
+
+config();
 
 const app = express();
 const PORT = 9000;
